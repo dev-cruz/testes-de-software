@@ -7,7 +7,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        assertEquals(1, 1);
+	Converter converter = new Converter();
+	
+	@Test public void testSomeLibraryMethod() {
+		// Double.compare returns 0 if the two values are numerically equals
+        assertEquals(Double.compare(converter.convertToDollar(1.0, "BRL"), 0.19), 0);
     }
 }
